@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .aaa{
+            height: 300px;
+            background-color: aqua;
+        }
+        .bbb{
+            height:50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: #ccc;
+        }
+        body{
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+<div class="aaa">button</div>
+<div class="bbb">bbb</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<div>123</div>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.js"></script>
+<script>
+    var bTop = $('.bbb').offset().top;
+    $(document).on('scroll',function(){
+        $b = $('.bbb');
+        console.log($(document).scrollTop(),$b.offset().top);
+        if($(document).scrollTop() > bTop){
+            $b.css({
+                'position':'fixed',
+                'top':'0',
+                'width':'100%'
+            });
+            // $('body').css({
+            //     'margin-top':'50px'
+            // })
+        }else if($(document).scrollTop() <= bTop){
+            $b.css({
+                'position':'static',
+                'top':bTop + 'px'
+            })
+        }
+    })
+</script>
+</body>
+</html>
