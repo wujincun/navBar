@@ -124,20 +124,25 @@
 <div>123</div>
 <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.js"></script>
 <script>
-    var bTop = $('.bbb').offset().top;
+    var $b = $('.bbb'), bTop = $b.offset().top,flag = true;
+    if($(document).scrollTop() > bTop && flag){
+        flag = false;
+        $b.css({
+            'position':'fixed',
+            'top':'0',
+            'width':'100%'
+        });
+    }
     $(document).on('scroll',function(){
-        $b = $('.bbb');
-        console.log($(document).scrollTop(),$b.offset().top);
-        if($(document).scrollTop() > bTop){
+        if($(document).scrollTop() > bTop && flag){
+            flag = false;
             $b.css({
                 'position':'fixed',
                 'top':'0',
                 'width':'100%'
             });
-            // $('body').css({
-            //     'margin-top':'50px'
-            // })
-        }else if($(document).scrollTop() <= bTop){
+        }else if($(document).scrollTop() <= bTop ){
+            flag = true;
             $b.css({
                 'position':'static',
                 'top':bTop + 'px'
